@@ -33,7 +33,7 @@ public class TypeResolver {
             String varType = parts[0]; // The type is the first part - our type
 
             // Here is the case where we encounter Named Tag (e.g., "@var Logger $log")
-            if (parts.length > 1 && parts[1].startsWith("@")) {
+            if (parts.length > 1 && parts[1].startsWith("$")) {
                 // Check if we have name mismatch
                 // (e.g., "@var Admin $adm" for variable $guest)
                 if (!parts[1].equals(variable.getName())) {
